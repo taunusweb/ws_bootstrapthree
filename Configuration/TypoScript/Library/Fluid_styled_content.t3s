@@ -1,0 +1,13 @@
+lib.fluidContent.templateRootPaths{
+	20 = EXT:mysignaturebasic/Resources/Private/Extensions/fluid_styled_content/Resources/Private/Templates/
+}
+
+lib.fluidContent.partialRootPaths{
+	20 = EXT:mysignaturebasic/Resources/Private/Extensions/fluid_styled_content/Resources/Private/Partials/
+}
+
+lib.fluidContent.layoutRootPaths{
+	20 = EXT:mysignaturebasic/Resources/Private/Extensions/fluid_styled_content/Resources/Private/Layouts/
+}
+
+lib.parseFunc_RTE.externalBlocks.table.stdWrap >

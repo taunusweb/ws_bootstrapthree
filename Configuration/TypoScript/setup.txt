@@ -1,0 +1,1 @@
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:ws_bootstrapthree/Configuration/TypoScript/Library/" extensions="t3s">

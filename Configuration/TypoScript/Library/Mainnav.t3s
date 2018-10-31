@@ -1,0 +1,570 @@
+#####################################################
+
+# MEGA-Dropdown-Menu rendern, "item-{field:uid}" ist für die Funktion unerheblich,
+# ich habe gerne die Möglichkeit, jeden Menüpunkt bei Bedarf individuell zu gestalten
+
+lib.megaMenu = HMENU
+lib.megaMenu {
+
+	special = list
+	special.value = 2
+	1 = TMENU
+	1 {
+		expAll = 1
+
+		NO = 1
+		NO.allWrap = <li class="item-{field:uid} nav-item">|</li>
+		NO.allWrap.insertData = 1
+		NO.ATagParams = class="nav-link"
+		NO.ATagTitle.field = abstract // description // title
+
+		ACT <.NO
+		ACT.allWrap = <li class="item-{field:uid} nav-item active">|</li>
+
+		IFSUB = 1
+		IFSUB.before = <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		IFSUB.after =  </a>
+		IFSUB.doNotLinkIt = 1
+		IFSUB.wrapItemAndSub = <li class="submenu item-{field:uid} nav-item">|</li>
+		IFSUB.wrapItemAndSub.insertData = 1
+		IFSUB.ATagTitle.field = abstract // description // title
+
+		ACTIFSUB <.IFSUB
+		ACTIFSUB.wrapItemAndSub = <li class="submenu current active item-{field:uid} nav-item">|</li>
+
+		CUR = 1
+		CUR.allWrap = <li class="item-{field:uid} nav-item active">|</li>
+		CUR.allWrap.insertData = 1
+		CUR.ATagParams = class="nav-link"
+		CUR.ATagTitle.field = abstract // description // title
+
+		CURIFSUB <.IFSUB
+		CURIFSUB.wrapItemAndSub = <li class="submenu current item-{field:uid} nav-item">|</li>
+
+	}
+
+	# 2. Ebene
+
+	2 = TMENU
+	2 {
+		expAll = 1
+		# Im Megemanu den NO-Zustand der zweiten Ebene am besten vermeiden...
+		NO = 1
+		NO.allWrap = <li class="header-link">|</li>
+		NO.wrapItemAndSub = <ul>|</ul>
+		NO.ATagTitle.field = abstract // description // title
+
+		IFSUB = 1
+		IFSUB.doNotLinkIt = 0
+		IFSUB.allWrap = <li class="header-link">|</li>
+		IFSUB.wrapItemAndSub = <ul> | </ul>
+		IFSUB.wrapItemAndSub.insertData = 1
+		IFSUB.ATagTitle.field = abstract // description // title
+
+		ACTIFSUB <.IFSUB
+		ACTIFSUB.wrapItemAndSub = <ul class="active"> | </ul>
+
+		wrap = <div class="dropdown-menu border-top-0">|</div>
+	}
+	# 3. Ebene
+	3 = TMENU
+	3 {
+		NO = 1
+		NO.allWrap = <li>|</li>
+		NO.ATagTitle.field = abstract // description // title
+
+		ACT = 1
+		ACT.allWrap = <li class="active"> | </li>
+		ACT.ATagTitle.field = abstract // description // title
+	}
+
+}
+
+
+#Bootstrap navbar, maximal 3 Ebenen
+
+
+lib.smartmenu = HMENU
+lib.smartmenu {
+	wrap = <ul id="main-menu" class="sm sm-simple">|</ul>
+
+	1 = TMENU
+	1 {
+		expAll = 1
+
+		NO = 1
+		NO {
+			wrapItemAndSub = <li>|</li>
+			stdWrap.htmlSpecialChars = 0
+			ATagTitle.field = description // subtitle // title
+		}
+
+		ACT = 1
+		ACT {
+			wrapItemAndSub = <li class="active"><span class="current">|</span></li>
+			stdWrap.htmlSpecialChars = 0
+			doNotLinkIt = 1
+			ATagTitle.field = description // subtitle // title
+		}
+
+		ACTIFSUB = 1
+		ACTIFSUB {
+			wrapItemAndSub = <li class="submenu currentsub">|</li>
+			stdWrap.htmlSpecialChars = 0
+			ATagTitle.field = description // subtitle // title
+		}
+
+	}
+
+	2 < .1
+	2.wrap = <ul>|</ul>
+	2 {
+		NO {
+			stdWrap.cObject = COA
+			stdWrap.cObject {
+				10 = TEXT
+				10 {
+					field = nav_title // title
+					listNum = 0
+					listNum.splitChar = 13
+				}
+				20 < .10
+				20 {
+					listNum = 1
+					wrap = <br />|
+					trim = 1
+				}
+			}
+		}
+
+	}
+
+
+	3 < .2
+	4 < .2
+	5 < .2
+}
+
+
+[globalVar = TSFE:id =1]
+	lib.smartmenu.alwaysActivePIDlist = 2
+[end]
+lib.navbar = HMENU
+lib.navbar {
+
+	1 = TMENU
+	1 {
+		expAll = 1
+
+		NO.allWrap = <li class="nav-item">|</li>
+		NO.ATagParams = class="nav-link"
+		NO.ATagTitle.field = subtitle // abstract // description // title
+
+		ACT = 1
+		ACT.doNotLinkIt = 1
+		ACT.wrapItemAndSub = <li class="nav-item active"><span class="nav-link">|</span></li>
+		ACT.ATagTitle.field = abstract // description // title
+
+
+
+
+
+	}
+
+
+
+}
+
+#Bootstrap with Pipe, class "nav-link" has to have display: inline-block;
+
+lib.navbarBootstrap = HMENU
+lib.navbarBootstrap {
+
+	special = list
+	special.value = 3,4,5,6
+
+	1 = TMENU
+	1 {
+		expAll = 1
+
+		NO.allWrap = <li class="nav-item">|</li>
+		NO.ATagParams = class="nav-link"
+		NO.ATagTitle.field = abstract // description // title
+
+		ACT = 1
+		ACT.wrapItemAndSub = <li class="nav-item active">|</li>
+		ACT.ATagParams = class="nav-link"
+		ACT.ATagTitle.field = abstract // description // title
+
+		IFSUB = 1
+		IFSUB.before = <a href="#" class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+		IFSUB.after =  </a>
+		IFSUB.doNotLinkIt = 1
+		IFSUB.wrapItemAndSub = <li class="nav-item dropdown">|</li>
+		IFSUB.ATagTitle.field = abstract // description // title
+
+		ACTIFSUB = 1
+		ACTIFSUB.before = <a href="#" class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+		ACTIFSUB.after =  </a>
+		ACTIFSUB.doNotLinkIt = 1
+		ACTIFSUB.wrapItemAndSub = <li class="nav-item dropdown">|</li>
+		ACTIFSUB.ATagTitle.field = abstract // description // title
+
+	}
+
+	2 = TMENU
+	2 {
+		expAll = 1
+		NO = 1
+		NO.ATagParams = class="dropdown-item"
+		NO.ATagTitle.field = abstract // description // title
+
+		ACT = 1
+		ACT.ATagParams = class="dropdown-item"
+		ACT.ATagTitle.field = abstract // description // title
+
+		wrap = <div class="dropdown-menu">|</div>
+	}
+}
+
+[globalVar = TSFE:id =1]
+	lib.navbarBootstrap.alwaysActivePIDlist = 2
+[end]
+
+lib.navBootstrap = HMENU
+lib.navBootstrap {
+	entryLevel = 2
+
+	1 = TMENU
+	1 {
+		expAll = 1
+
+		NO.allWrap = <li class="nav-item">|</li>
+		NO.ATagTitle.field = subtitle // abstract // description // title
+		NO.ATagParams = class="nav-link"
+
+		ACT = 1
+		ACT.allWrap = <li class="nav-item active">|</li>
+		ACT.ATagTitle.field = subtitle // abstract // description // title
+		ACT.ATagParams = class="nav-link"
+
+		CUR = 1
+		CUR.doNotLinkIt = 1
+		CUR.allWrap = <li class="nav-item active"><span class="nav-link"|</span></li>
+		CUR.ATagTitle.field = subtitle // abstract // description // title
+
+
+		wrap = <ul class="nav flex-column">|</ul>
+	}
+
+}
+
+
+#Ankermenü zweite Ebene
+lib.anchormenu = CONTENT
+lib.anchormenu {
+	table = tt_content
+	select {
+		orderBy = sorting
+		pidInList = 2 || 3 || 4 || 5
+
+		where = (NOT hidden) AND (NOT deleted)
+		languageField = sys_language_uid
+	}
+	renderObj = TEXT
+	renderObj {
+		field = subheader
+		wrap = <li>|</li>
+		wrap.insertData = 1
+		typolink.parameter.field = pid
+		typolink.parameter.dataWrap = |#{field:uid}
+		if.isTrue.field = subheader
+	}
+
+
+	wrap = <ul class="dropdown-menu-ws">|</ul>
+
+}
+
+#Bootstrap nav, maximal 2 Ebenen
+
+lib.navOne = HMENU
+lib.navOne {
+	special = list
+	special.value = 2,3,4
+
+	1 = TMENU
+	1 {
+		expAll = 1
+
+		NO.allWrap = <li class="nav-item">|</li>
+		NO.ATagParams = class="nav-link"
+
+		ACT = 1
+		ACT.allWrap = <li class="nav-item active"><span class="nav-link">|</span></li>
+		ACT.doNotLinkIt = 1
+
+
+
+	}
+
+}
+
+lib.navDRK = HMENU
+lib.navDRK {
+	special = directory
+	special.value = 2
+
+	1 = TMENU
+	1 {
+		expAll = 1
+
+		NO.allWrap = <li class="nav-item">|</li>
+		NO.ATagParams = class="nav-link"
+
+		ACT = 1
+		ACT.allWrap = <li class="nav-item active"><span class="nav-link">|</span></li>
+		ACT.doNotLinkIt = 1
+
+
+
+	}
+
+}
+
+lib.navDRKtwo = HMENU
+lib.navDRKtwo {
+	special = list
+	special.value = 3,4
+
+	1 = TMENU
+	1 {
+		expAll = 1
+
+		NO.allWrap = <li class="nav-item">|</li>
+		NO.ATagParams = class="nav-link"
+
+		ACT = 1
+		ACT.allWrap = <li class="nav-item active"><span class="nav-link">|</span></li>
+		ACT.doNotLinkIt = 1
+
+
+
+	}
+
+}
+
+lib.navForschung = HMENU
+lib.navForschung {
+	special = directory
+	special.value = 3
+
+	1 = TMENU
+	1 {
+		expAll = 1
+
+		NO.allWrap = <li class="nav-item">|</li>
+		NO.ATagParams = class="nav-link"
+
+		ACT = 1
+		ACT.allWrap = <li class="nav-item active"><span class="nav-link">|</span></li>
+		ACT.doNotLinkIt = 1
+
+
+
+	}
+
+}
+
+lib.navForschungtwo = HMENU
+lib.navForschungtwo {
+	special = list
+	special.value = 2,4
+
+	1 = TMENU
+	1 {
+		expAll = 1
+
+		NO.allWrap = <li class="nav-item">|</li>
+		NO.ATagParams = class="nav-link"
+
+		ACT = 1
+		ACT.allWrap = <li class="nav-item active"><span class="nav-link">|</span></li>
+		ACT.doNotLinkIt = 1
+
+
+
+	}
+
+}
+
+lib.navProjekte = HMENU
+lib.navProjekte {
+	special = directory
+	special.value = 4
+
+	1 = TMENU
+	1 {
+		expAll = 1
+
+		NO.allWrap = <li class="nav-item">|</li>
+		NO.ATagParams = class="nav-link"
+
+		ACT = 1
+		ACT.allWrap = <li class="nav-item active"><span class="nav-link">|</span></li>
+		ACT.doNotLinkIt = 1
+
+
+
+	}
+
+}
+
+lib.navProjektetwo = HMENU
+lib.navProjektetwo {
+	special = list
+	special.value = 2,3
+
+	1 = TMENU
+	1 {
+		expAll = 1
+
+		NO.allWrap = <li class="nav-item">|</li>
+		NO.ATagParams = class="nav-link"
+
+		ACT = 1
+		ACT.allWrap = <li class="nav-item active"><span class="nav-link">|</span></li>
+		ACT.doNotLinkIt = 1
+
+
+
+	}
+
+}
+
+
+lib.navBootstrapTwo = HMENU
+lib.navBootstrapTwo {
+	special = list
+	special.value = 6,7
+
+	1 = TMENU
+	1 {
+		expAll = 1
+
+		NO.allWrap = <li>|</li>
+
+		IFSUB = 1
+		IFSUB.wrapItemAndSub = <li>|</li>
+
+		ACT = 1
+		ACT.allWrap = <li class="active">|</li>
+
+		ACTIFSUB = 1
+		ACTIFSUB.wrapItemAndSub = <li class="active">|</li>
+
+	}
+
+	2 = TMENU
+	2 {
+		expAll = 1
+
+		NO.allWrap = <li>|</li>
+
+		ACT = 1
+		ACT.allWrap = <li class="active">|</li>
+		wrap = <ul class="dropdown-menu-ws">|</ul>
+
+	}
+
+
+
+
+}
+
+
+
+
+
+
+
+#Bootstrap nav, maximal 2 Ebenen
+
+lib.navBootstrapEasy = HMENU
+lib.navBootstrapEasy {
+	entryLevel = 2
+
+	1 = TMENU
+	1 {
+		expAll = 1
+
+
+		NO.allWrap = <li>|</li>
+		NO.ATagTitle.field = subtitle // abstract // description // title
+
+		ACT = 1
+		ACT.allWrap = <li class="active">|</li>
+		ACT.ATagTitle.field = subtitle // abstract // description // title
+
+		CUR = 1
+		CUR.doNotLinkIt = 1
+		CUR.allWrap = <li class="active">|</li>
+		CUR.ATagTitle.field = subtitle // abstract // description // title
+
+
+		wrap = <ul class="nav sidebar-nav">|</ul>
+	}
+
+}
+
+
+lib.rootline = HMENU
+lib.rootline {
+	special = rootline
+
+	# zeige komplette rootline an
+	special.range = 0|-1
+
+	# Variation: Link nur auf die Uebergeordnete Seite
+	#special.range = -2|-2
+
+	# Text vor dem Rootline Menue
+	wrap = <p class="brotkrumen">Sie sind hier:&nbsp;|</p>
+
+	1 = TMENU
+	1.target = _top
+	1.NO {
+		stdWrap.htmlSpecialChars = 1
+
+		# Layout 1: Seite 1 | Seite 2 | Seite 3
+		#linkWrap = |&nbsp;&#124;&nbsp;|*||*| |
+
+		# Layout 2: Seite 1 > Seite 2 > Seite 3
+		linkWrap = |&nbsp;>&nbsp;|*||*| |
+
+		# Layout 3: Seite 1 >> Seite 2 >> Seite 3
+		#linkWrap = |&nbsp;&raquo;&nbsp;|*||*| |
+
+		doNotLinkIt = |*| 0 |*| 1
+	}
+}
+
+
+## Footer-Navigation
+lib.footernav = HMENU
+lib.footernav {
+	special = directory
+	special.value = 5
+
+	1 = TMENU
+	1 {
+		NO = 1
+		NO.stdWrap.htmlSpecialChars = 1
+
+		CUR = 1
+		CUR.ATagParams = class="cur"
+		CUR.stdWrap.htmlSpecialChars = 1
+		CUR.doNotLinkIt = 1
+	}
+}
+

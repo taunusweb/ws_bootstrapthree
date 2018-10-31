@@ -1,0 +1,32 @@
+########################################
+# searchbox pure HTML
+########################################
+lib.searchbox_html = TEXT
+lib.searchbox_html.value (
+<form method="get" id="form_kesearch_searchfield" name="form_kesearch_searchfield" class="px-2 py-2 form-inline dropdown-item" action="/">
+  <input type="hidden" name="id" value="{$page.theme.search.pid}" />
+  <input type="text" class="form-control mr-2" id="ke_search_searchfield_sword" name="tx_kesearch_pi1[sword]" placeholder="Suchbegriff eingeben" />
+<button type="submit" class="btn btn-primary">
+    <i class="fa fa-search"></i>
+</button>
+</form>
+)
+
+# ==============================================
+# Typoscript configuration for ke_search
+# ==============================================
+# paths for fluid templating
+plugin.tx_kesearch_pi1 {
+	templateRootPaths.5 = EXT:ws_bootstrapthree/Resources/Private/Extensions/ke_search/Templates/
+	partialRootPaths.5 = EXT:ws_bootstrapthree/Resources/Private/Extensions/ke_search/Partials/
+}
+plugin.tx_kesearch_pi2 {
+	templateRootPaths.5 = EXT:ws_bootstrapthree/Resources/Private/Extensions/ke_search/Templates/
+	partialRootPaths.5 = EXT:ws_bootstrapthree/Resources/Private/Extensions/ke_search/Partials/
+}
+
+plugin {
+	tx_kesearch_pi1.cssFile = EXT:ws_bootstrapthree/Resources/Public/Css/ke_search.css
+	tx_kesearch_pi2.cssFile = EXT:ws_bootstrapthree/Resources/Public/Css/ke_search.css
+
+}

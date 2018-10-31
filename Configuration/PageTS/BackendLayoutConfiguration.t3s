@@ -1,0 +1,776 @@
+mod {
+	web_layout {
+		BackendLayouts {
+			default {
+				title = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.default
+				config {
+					backend_layout {
+						colCount = 1
+						rowCount = 3
+						rows {
+							1 {
+								columns {
+									1 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.hero-unit
+										colPos = 5
+									}
+								}
+							}
+							2 {
+								columns {
+									1 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.main-content
+										colPos = 0
+									}
+								}
+							}
+							3 {
+								columns {
+									1 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer1
+										colPos = 10
+									}
+								}
+							}
+						}
+
+					}
+
+				}
+				icon = EXT:ws_bootstrapthree/Resources/Public/Images/BackendLayouts/oneColumnNew.svg
+			}
+			oneColumnTwoColumnsFooter {
+				title = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.oneColumnTwoColumnsFooter
+				config {
+					backend_layout {
+						colCount = 2
+						rowCount = 3
+						rows {
+							1 {
+								columns {
+									1 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.hero-unit
+										colPos = 5
+										colspan = 2
+									}
+								}
+							}
+							2 {
+								columns {
+									1 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.main-content
+										colPos = 0
+										colspan = 2
+									}
+								}
+							}
+							3 {
+								columns {
+									1 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer1
+										colPos = 10
+									}
+									2 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer2
+										colPos = 11
+									}
+								}
+							}
+						}
+
+					}
+
+				}
+				icon = EXT:ws_bootstrapthree/Resources/Public/Images/BackendLayouts/oneColumnTwoColumnsFooterNew.svg
+			}
+			oneColumnThreeColumnsFooter {
+				title = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.oneColumnThreeColumnsFooter
+				config {
+					backend_layout {
+						colCount = 3
+						rowCount = 3
+						rows {
+							1 {
+								columns {
+									1 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.hero-unit
+										colPos = 5
+										colspan = 3
+									}
+								}
+							}
+							2 {
+								columns {
+									1 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.main-content
+										colPos = 0
+										colspan = 3
+									}
+								}
+							}
+							3 {
+								columns {
+									1 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer1
+										colPos = 10
+									}
+									2 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer2
+										colPos = 11
+									}
+									3 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer3
+										colPos = 12
+									}
+								}
+							}
+						}
+
+					}
+
+				}
+				icon = EXT:ws_bootstrapthree/Resources/Public/Images/BackendLayouts/oneColumnThreeColumnsFooterNew.svg
+			}
+			oneColumnFourColumnsFooter {
+				title = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.oneColumnFourColumnsFooter
+				config {
+					backend_layout {
+						colCount = 4
+						rowCount = 3
+						rows {
+							1 {
+								columns {
+									1 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.hero-unit
+										colPos = 5
+										colspan = 4
+									}
+								}
+							}
+							2 {
+								columns {
+									1 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.main-content
+										colPos = 0
+										colspan = 4
+									}
+								}
+							}
+							3 {
+								columns {
+									1 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer1
+										colPos = 10
+									}
+									2 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer2
+										colPos = 11
+									}
+									3 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer3
+										colPos = 12
+									}
+									4 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer4
+										colPos = 13
+									}
+								}
+							}
+						}
+
+					}
+
+				}
+				icon = EXT:ws_bootstrapthree/Resources/Public/Images/BackendLayouts/oneColumnFourColumnsFooter.svg
+			}
+			oneColumnSixColumnsFooter {
+				title = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.oneColumnSixColumnsFooter
+				config {
+					backend_layout {
+						colCount = 6
+						rowCount = 3
+						rows {
+							1 {
+								columns {
+									1 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.hero-unit
+										colPos = 5
+										colspan = 6
+									}
+								}
+							}
+							2 {
+								columns {
+									1 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.main-content
+										colPos = 0
+										colspan = 6
+									}
+								}
+							}
+							3 {
+								columns {
+									1 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer1
+										colPos = 10
+									}
+									2 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer2
+										colPos = 11
+									}
+									3 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer3
+										colPos = 12
+									}
+									4 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer4
+										colPos = 13
+									}
+									5 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer5
+										colPos = 13
+									}
+									6 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer6
+										colPos = 13
+									}
+								}
+							}
+						}
+
+					}
+
+				}
+				icon = EXT:ws_bootstrapthree/Resources/Public/Images/BackendLayouts/oneColumnSixColumnsFooter.svg
+			}
+			twoColumnsLeftOneColumnFooter {
+				title = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.twocolumnsleftonecolumnfooter
+				config {
+					backend_layout {
+						colCount = 4
+						rowCount = 3
+						rows {
+							1 {
+								columns {
+									1 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.hero-unit
+										colPos = 5
+										colspan = 4
+									}
+								}
+							}
+							2 {
+								columns {
+									1 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.left
+										colPos = 1
+									}
+									2 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.main-content
+										colspan = 3
+										colPos = 0
+									}
+								}
+							}
+							3 {
+								columns {
+									1 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer1
+										colPos = 10
+										colspan = 4
+									}
+								}
+							}
+						}
+					}
+
+				}
+				icon = EXT:ws_bootstrapthree/Resources/Public/Images/BackendLayouts/twoColumnsLeftOneColumnFooter.svg
+			}
+			twoColumnsLeftTwoColumnsFooter {
+				title = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.twocolumnslefttwocolumnsfooter
+				config {
+					backend_layout {
+						colCount = 4
+						rowCount = 3
+						rows {
+							1 {
+								columns {
+									1 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.hero-unit
+										colPos = 5
+										colspan = 4
+									}
+								}
+							}
+							2 {
+								columns {
+									1 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.left
+										colPos = 1
+									}
+									2 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.main-content
+										colspan = 3
+										colPos = 0
+									}
+								}
+							}
+							3 {
+								columns {
+									1 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer1
+										colPos = 10
+										colspan = 2
+									}
+									2 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer2
+										colPos = 11
+										colspan = 2
+									}
+								}
+							}
+						}
+					}
+
+				}
+				icon = EXT:ws_bootstrapthree/Resources/Public/Images/BackendLayouts/twoColumnsLeftTwoColumnsFooter.svg
+			}
+			twoColumnsLeftThreeColumnsFooter {
+				title = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.twocolumnsleftthreecolumnsfooter
+				config {
+					backend_layout {
+						colCount = 3
+						rowCount = 3
+						rows {
+							1 {
+								columns {
+									1 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.hero-unit
+										colPos = 5
+										colspan = 3
+									}
+								}
+							}
+							2 {
+								columns {
+									1 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.left
+										colPos = 1
+									}
+									2 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.main-content
+										colspan = 2
+										colPos = 0
+									}
+								}
+							}
+							3 {
+								columns {
+									1 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer1
+										colPos = 10
+									}
+									2 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer2
+										colPos = 11
+									}
+									3 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer3
+										colPos = 12
+									}
+								}
+							}
+						}
+					}
+
+				}
+				icon = EXT:ws_bootstrapthree/Resources/Public/Images/BackendLayouts/twoColumnsLeftThreeColumnsFooter.svg
+			}
+			twoColumnsLeftFourColumnsFooter {
+				title = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.twocolumnsleftfourcolumnsfooter
+				config {
+					backend_layout {
+						colCount = 4
+						rowCount = 3
+						rows {
+							1 {
+								columns {
+									1 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.hero-unit
+										colPos = 5
+										colspan = 4
+									}
+								}
+							}
+							2 {
+								columns {
+									1 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.left
+										colPos = 1
+									}
+									2 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.main-content
+										colspan = 3
+										colPos = 0
+									}
+								}
+							}
+							3 {
+								columns {
+									1 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer1
+										colPos = 10
+									}
+									2 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer2
+										colPos = 11
+									}
+									3 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer3
+										colPos = 12
+									}
+									4 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer4
+										colPos = 13
+									}
+								}
+							}
+						}
+					}
+
+				}
+				icon = EXT:ws_bootstrapthree/Resources/Public/Images/BackendLayouts/twoColumnsLeftFourColumnsFooter.svg
+			}
+			twoColumnsLeftSixColumnsFooter {
+				title = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.twocolumnsleftsixcolumnsfooter
+				config {
+					backend_layout {
+						colCount = 6
+						rowCount = 3
+						rows {
+							1 {
+								columns {
+									1 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.hero-unit
+										colPos = 5
+										colspan = 6
+									}
+								}
+							}
+							2 {
+								columns {
+									1 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.left
+										colPos = 1
+										colspan = 2
+									}
+									2 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.main-content
+										colspan = 4
+										colPos = 0
+									}
+								}
+							}
+							3 {
+								columns {
+									1 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer1
+										colPos = 10
+									}
+									2 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer2
+										colPos = 11
+									}
+									3 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer3
+										colPos = 12
+									}
+									4 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer4
+										colPos = 13
+									}
+									5 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer5
+										colPos = 14
+									}
+									6 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer6
+										colPos = 15
+									}
+								}
+							}
+						}
+					}
+
+				}
+				icon = EXT:ws_bootstrapthree/Resources/Public/Images/BackendLayouts/twoColumnsLeftSixColumnsFooter.svg
+			}
+			twoColumnsRightOneColumnFooter {
+				title = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.twocolumnsrightonecolumnfooter
+				config {
+					backend_layout {
+						colCount = 4
+						rowCount = 3
+						rows {
+							1 {
+								columns {
+									1 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.hero-unit
+										colPos = 5
+										colspan = 4
+									}
+								}
+							}
+							2 {
+								columns {
+									1 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.main-content
+										colspan = 3
+										colPos = 0
+									}
+									2 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.right
+										colPos = 2
+									}
+								}
+							}
+							3 {
+								columns {
+									1 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer1
+										colPos = 10
+										colspan = 4
+									}
+								}
+							}
+						}
+					}
+
+				}
+				icon = EXT:ws_bootstrapthree/Resources/Public/Images/BackendLayouts/twoColumnsRightOneColumnFooter.svg
+			}
+			twoColumnsRightTwoColumnsFooter {
+				title = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.twocolumnsrighttwocolumnsfooter
+				config {
+					backend_layout {
+						colCount = 4
+						rowCount = 3
+						rows {
+							1 {
+								columns {
+									1 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.hero-unit
+										colPos = 5
+										colspan = 4
+									}
+								}
+							}
+							2 {
+								columns {
+									1 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.main-content
+										colspan = 3
+										colPos = 0
+									}
+									2 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.right
+										colPos = 2
+									}
+								}
+							}
+							3 {
+								columns {
+									1 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer1
+										colPos = 10
+										colspan = 2
+									}
+									2 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer2
+										colPos = 11
+										colspan = 2
+									}
+								}
+							}
+						}
+					}
+
+				}
+				icon = EXT:ws_bootstrapthree/Resources/Public/Images/BackendLayouts/twoColumnsRightTwoColumnsFooter.svg
+			}
+			twoColumnsRightThreeColumnsFooter {
+				title = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.twocolumnsrightthreecolumnsfooter
+				config {
+					backend_layout {
+						colCount = 3
+						rowCount = 3
+						rows {
+							1 {
+								columns {
+									1 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.hero-unit
+										colPos = 5
+										colspan = 3
+									}
+								}
+							}
+							2 {
+								columns {
+									1 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.main-content
+										colspan = 2
+										colPos = 0
+									}
+									2 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.right
+										colPos = 2
+									}
+								}
+							}
+							3 {
+								columns {
+									1 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer1
+										colPos = 10
+									}
+									2 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer2
+										colPos = 11
+									}
+									3 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer3
+										colPos = 12
+									}
+								}
+							}
+						}
+					}
+
+				}
+				icon = EXT:ws_bootstrapthree/Resources/Public/Images/BackendLayouts/twoColumnsRightThreeColumnsFooter.svg
+			}
+			twoColumnsRightFourColumnsFooter {
+				title = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.twocolumnsrightfourcolumnsfooter
+				config {
+					backend_layout {
+						colCount = 4
+						rowCount = 3
+						rows {
+							1 {
+								columns {
+									1 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.hero-unit
+										colPos = 5
+										colspan = 4
+									}
+								}
+							}
+							2 {
+								columns {
+									1 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.main-content
+										colspan = 3
+										colPos = 0
+									}
+									2 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.right
+										colPos = 2
+									}
+								}
+							}
+							3 {
+								columns {
+									1 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer1
+										colPos = 10
+									}
+									2 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer2
+										colPos = 11
+									}
+									3 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer3
+										colPos = 12
+									}
+									4 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer4
+										colPos = 13
+									}
+								}
+							}
+						}
+					}
+
+				}
+				icon = EXT:ws_bootstrapthree/Resources/Public/Images/BackendLayouts/twoColumnsRightFourColumnsFooter.svg
+			}
+			twoColumnsRightSixColumnsFooter {
+				title = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.twocolumnsrightsixcolumnsfooter
+				config {
+					backend_layout {
+						colCount = 6
+						rowCount = 3
+						rows {
+							1 {
+								columns {
+									1 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.hero-unit
+										colPos = 5
+										colspan = 6
+									}
+								}
+							}
+							2 {
+								columns {
+									1 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.main-content
+										colspan = 4
+										colPos = 0
+									}
+									2 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.right
+										colPos = 2
+										colspan = 2
+									}
+								}
+
+							}
+							3 {
+								columns {
+									1 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer1
+										colPos = 10
+									}
+									2 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer2
+										colPos = 11
+									}
+									3 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer3
+										colPos = 12
+									}
+									4 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer4
+										colPos = 13
+									}
+									5 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer5
+										colPos = 14
+									}
+									6 {
+										name = LLL:EXT:ws_bootstrapthree/Resources/Private/Language/Backend.xlf:backend_layout.footer6
+										colPos = 15
+									}
+								}
+							}
+						}
+					}
+
+				}
+				icon = EXT:ws_bootstrapthree/Resources/Public/Images/BackendLayouts/twoColumnsRightSixColumnsFooter.svg
+			}
+		}
+	}
+}
+

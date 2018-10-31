@@ -1,0 +1,23 @@
+config {
+
+	htmlTag_stdWrap {
+    cObject = TEXT
+    cObject.value (
+		<html lang="de">
+      )
+    }
+
+	language = de
+	locale_all = de_DE.UTF-8
+	sys_language_uid = 0
+
+	absRefPrefix = /
+	tx_realurl_enable = 1
+	prefixLocalAnchors = 1
+
+	disablePrefixComment = 1
+
+	spamProtectEmailAddresses = -3
+	spamProtectEmailAddresses_atSubst = @<span style="display:none;">remove-this.</span>
+
+}

@@ -1,0 +1,13 @@
+lib.contentElement.templateRootPaths{
+	20 = EXT:ws_bootstrapthree/Resources/Private/Extensions/fluid_styled_content/Templates/
+}
+
+
+lib.contentElement.partialRootPaths{
+	20 = EXT:ws_bootstrapthree/Resources/Private/Extensions/fluid_styled_content/Partials/
+}
+
+lib.contentElement.layoutRootPaths{
+	20 = EXT:ws_bootstrapthree/Resources/Private/Extensions/fluid_styled_content/Layouts/
+}
+
