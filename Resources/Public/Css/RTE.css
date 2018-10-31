@@ -1,0 +1,21 @@
+.btn-primary {
+	background-color: #4361a8;
+	border-color: #4361a8;
+	color: #fff;
+	padding: .5rem .75rem;
+}
+
+span.btn-primary a {
+	color: #fff;
+}
+
+.table {
+	width: 100%;
+	max-width: 100%;
+	margin-bottom: 1rem;
+	background-color: transparent;
+}
+
+.table-striped tbody tr:nth-of-type(2n+1) {
+	background-color: rgba(0, 0, 0, 0.05);
+}

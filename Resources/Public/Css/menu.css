@@ -1,0 +1,142 @@
+
+.navbar-expand-lg .navbar-nav .nav-link {
+	padding: 15px 25px;
+}
+
+/* (the mega-menu) */
+.navbar {
+	padding: 0;
+}
+
+nav {
+	position: absolute;
+	width: 100%;
+}
+
+/* first stage */
+nav ul.mega {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+}
+
+nav a {
+	display: block;
+	text-decoration: none;
+}
+
+nav ul li {
+	list-style: none;
+	transition: 0.5s;
+}
+
+nav ul.mega > li:hover,
+nav ul.mega > li.active{
+	text-decoration: none;
+}
+
+/* second stage (the mega-menu) */
+
+.dropdown-menu {
+	left:0;
+	min-width: 300px;
+	flex-wrap: wrap;
+	border-radius: 0 0 0.35rem 0.35rem;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.dropdown-menu.show {
+	display: flex;
+}
+
+/* third stage (child-menus in the mega-menu) */
+nav div.dropdown-menu ul {
+	width: 33%;
+	margin-bottom: 40px;
+	box-shadow: none;
+}
+nav div.dropdown-menu li.header-link {
+	margin-bottom: 15px;
+	font-size: 1.1rem;
+	font-weight: 700;
+}
+
+nav div.dropdown-menu h4.secondHeader {
+	margin-top: 15px;
+}
+
+nav .dropdown-menu ul li {
+	display: block;
+}
+
+nav div.dropdown-menu ul li .nav-link {
+	transition: 0.2s;
+	font-size:1rem;
+	padding: 3px 5px;
+}
+
+
+.dropdown-item:focus, .dropdown-item:hover {
+	text-decoration: none;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+	text-decoration: none;
+}
+
+@media screen and (max-width: 500px) {
+	nav div.dropdown-menu ul {
+		width: 100%;
+	}
+}
+@media screen and (min-width: 1200px) {
+	nav div.dropdown-menu ul {
+		width: 24.3333%;
+	}
+	.dropdown-menu {
+		width: 100%;
+		flex-wrap: wrap;
+	}
+
+}
+
+.page-item.active .page-link {
+	z-index: 2;
+}
+
+.dropdown-menu.search {
+	left: auto;
+}
+
+.main .nav-link {
+	padding: 0 1rem 0 0;
+}
+
+.aside .nav-link {
+	padding: 0.25rem 0 0.25rem 0;
+}
+
+.aside ul.nav li.nav-item ul {
+	list-style: none;
+	padding: 0;
+}
+
+.aside ul.nav li.nav-item ul li .nav-link {
+	padding: 0.15rem 0 0.15rem 1rem;
+	color: #e46450;
+}
+
+.aside ul.nav li.nav-item ul li a:hover {
+	color: #00405d;
+}
+.aside ul.nav li.active .nav-link{
+	color: #554f4a;
+}
+
+.aside ul.nav li.current .nav-link,
+.aside ul.nav li.active ul li.current .nav-link {
+	color: #00405d;
+}
