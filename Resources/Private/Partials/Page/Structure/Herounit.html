@@ -1,0 +1,27 @@
+
+<f:if condition="{settings.heroslide.enable}">
+	<f:then>
+		<f:if condition="{settings.herofullwidth.enable}">
+			<f:then>
+				<f:cObject typoscriptObjectPath="lib.dynamicContentSlide" data="{colPos: '5'}" />
+			</f:then>
+			<f:else>
+				<div class="container">
+					<f:cObject typoscriptObjectPath="lib.dynamicContentSlide" data="{colPos: '5'}" />
+				</div>
+			</f:else>
+		</f:if>
+	</f:then>
+	<f:else>
+		<f:if condition="{settings.herofullwidth.enable}">
+			<f:then>
+				<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '5'}" />
+			</f:then>
+			<f:else>
+				<div class="container">
+					<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '5'}" />
+				</div>
+			</f:else>
+		</f:if>
+	</f:else>
+</f:if>

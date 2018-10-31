@@ -1,0 +1,16 @@
+<div class="footer" role="contentinfo">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<f:cObject typoscriptObjectPath="lib.dynamicContentSlide" data="{colPos: '10'}" />
+			</div>
+		</div>
+	</div>
+	<f:if condition="{settings.copyright.enable}">
+		<div class="container copyright">
+			<p class="">
+				&copy; <f:format.date format="Y">now</f:format.date> &#124; {settings.copyright.text}
+			</p>
+		</div>
+	</f:if>
+</div><!--/footer-->

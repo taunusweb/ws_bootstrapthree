@@ -1,0 +1,22 @@
+<div class="footer" role="contentinfo">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-sm-4">
+				<f:cObject typoscriptObjectPath="lib.dynamicContentSlide" data="{colPos: '10'}" />
+			</div>
+			<div class="col-12 col-sm-4">
+				<f:cObject typoscriptObjectPath="lib.dynamicContentSlide" data="{colPos: '11'}" />
+			</div>
+			<div class="col-12 col-sm-4">
+				<f:cObject typoscriptObjectPath="lib.dynamicContentSlide" data="{colPos: '12'}" />
+			</div>
+		</div>
+	</div>
+	<f:if condition="{settings.copyright.enable}">
+		<div class="container copyright">
+			<p class="text-center">
+				&copy; {settings.copyright.text} <f:format.date format="Y">now</f:format.date>
+			</p>
+		</div>
+	</f:if>
+</div><!--/footer-->

@@ -1,0 +1,19 @@
+<f:layout name="FourColumnsFooterLayout" />
+<f:section name="Main">
+	<div id="mainContent" role="main">
+		<div class="container content">
+			<div class="row">
+				<div class="col-12 col-lg-9">
+					<div class="main">
+						<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
+					</div>
+				</div>
+				<div class=" col-12 col-lg-3">
+					<div class="aside">
+						<f:cObject typoscriptObjectPath="lib.dynamicContentSlide" data="{colPos: '2'}" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</f:section>

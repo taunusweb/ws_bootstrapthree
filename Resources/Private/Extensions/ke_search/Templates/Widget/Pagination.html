@@ -1,0 +1,27 @@
+<f:spaceless>
+<ul class="pagination">
+<f:if condition="{pagination.previous}">
+    <li class="page-item">
+        <f:link.page additionalParams="{tx_kesearch_pi1: {page: pagination.previous}}" addQueryString="1" class="page-link">
+            <span aria-hidden="true">&laquo;</span>
+            <span class="sr-only">Previous</span>
+        </f:link.page>
+    </li>
+</f:if>
+<f:for each="{pagination.pages}" as="page">
+    <li class="page-item{f:if(condition: '{page} == {pagination.currentPage}', then: ' active')}">
+        <f:link.page additionalParams="{tx_kesearch_pi1: {page: page}}" addQueryString="1" class="page-link">
+            {page}
+        </f:link.page>
+    </li>
+</f:for>
+<f:if condition="{pagination.next}">
+    <li class="page-item">
+        <f:link.page additionalParams="{tx_kesearch_pi1: {page: pagination.next}}" addQueryString="1" class="page-link">
+            <span aria-hidden="true">&raquo;</span>
+            <span class="sr-only">Next</span>
+        </f:link.page>
+    </li>
+</f:if>
+</ul>
+</f:spaceless>

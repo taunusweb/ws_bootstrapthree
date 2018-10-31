@@ -1,0 +1,65 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	data-namespace-typo3-fluid="true">
+<f:if condition="{menuMain}">
+		<f:for each="{menuMain}" as="mainItem">
+			<f:if condition="{mainItem.data.doktype} == 116">
+				<f:then>
+					<f:render partial="Navigation/Elements/ItemMega" arguments="{item: mainItem}"/>
+				</f:then>
+				<f:else if="{mainItem.children}">
+					<f:render partial="Navigation/Elements/ItemDropdown" arguments="{item: mainItem}"/>
+				</f:else>
+				<f:else>
+					<f:render partial="Navigation/Elements/Item" arguments="{item: mainItem}"/>
+				</f:else>
+			</f:if>
+			<f:if condition="{mainItem.children}">
+				<f:if condition="{mainItem.data.doktype} == 116">
+					<f:then>
+						<f:render section="submenuMega" arguments="{submenuMega: mainItem.children}"/>
+					</f:then>
+					<f:else>
+						<f:render section="submenu" arguments="{submenu: mainItem.children}"/>
+					</f:else>
+				</f:if>
+			</f:if>
+			</li>
+		</f:for>
+</f:if>
+<f:section name="submenu">
+	<div class="dropdown-menu">
+		<f:for each="{submenu}" as="subItem">
+			<f:render partial="Navigation/Elements/DropdownLink" arguments="{item: subItem}"/>
+			<f:if condition="{subItem.children}">
+				<f:render section="submenu" arguments="{submenu: subItem.children}"/>
+			</f:if>
+		</f:for>
+	</div>
+
+</f:section>
+
+
+<f:section name="submenuMega">
+	<div class="dropdown-menu border-top-0">
+			<f:for each="{submenuMega}" as="subItem">
+				<f:render partial="Navigation/Elements/SubItemMega" arguments="{item: subItem}"/>
+				<f:if condition="{subItem.children}">
+					<f:render section="thirdlevelMega" arguments="{thirdlevelMega: subItem.children}"/>
+				</f:if>
+				</ul>
+			</f:for>
+	</div>
+
+
+</f:section>
+
+<f:section name="thirdlevelMega">
+		<f:for each="{thirdlevelMega}" as="subItem">
+			<f:render partial="Navigation/Elements/ThirdLevelMegaItem" arguments="{item: subItem}"/>
+			<f:if condition="{subItem.children}">
+				<f:render section="submenu" arguments="{submenu: subItem.children}"/>
+			</f:if>
+		</f:for>
+</f:section>
+
+</html>

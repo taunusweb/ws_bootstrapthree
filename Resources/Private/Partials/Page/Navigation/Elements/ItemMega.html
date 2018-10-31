@@ -1,0 +1,18 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+<f:if condition="{item.spacer} || {item.current}">
+	<f:then>
+		<li class="nav-item submenu{f:if(condition:item.current, then:' current')}{f:if(condition:item.spacer, then:' spacer')}">
+			<a href="#" class="nav-link dropdown-toggle" id="navbarMegaMenuLink-{item.data.uid}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{item.title}</a>
+	</f:then>
+	<f:else if="{item.active}">
+		<li class="nav-item submenu{f:if(condition:item.active, then:' active')}">
+			<a href="#" class="nav-link dropdown-toggle" id="navbarMegaMenuLink-{item.data.uid}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{item.title}</a>
+	</f:else>
+	<f:else>
+		<li class="nav-item submenu">
+			<a href="#" class="nav-link dropdown-toggle" id="navbarMegaMenuLink-{item.data.uid}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{item.title}</a>
+	</f:else>
+</f:if>
+
+</html>

@@ -1,0 +1,24 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="Main">
+	<f:if condition="{menu}">
+		<f:if condition="{data.frame_class}==vertical-nav">
+			<f:then>
+				<ul class="nav flex-column">
+			</f:then>
+			<f:else>
+				<ul class="nav">
+			</f:else>
+		</f:if>
+			<f:for each="{menu}" as="page">
+				<li class="nav-item">
+					<a class="nav-link{f:if(condition:page.active, then:' active')}" href="{page.link}"{f:if(condition: page.target, then: ' target="{page.target}"')} title="{page.title}">
+						{page.title}
+					</a>
+				</li>
+			</f:for>
+		</ul>
+	</f:if>
+
+</f:section>
+</html>

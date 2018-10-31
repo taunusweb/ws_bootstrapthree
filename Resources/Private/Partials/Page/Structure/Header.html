@@ -1,0 +1,39 @@
+<div class="header" role="banner">
+	<f:if condition="{settings.skiplinks.enable}">
+	<div id="skiplinks">
+		<ol>
+			<li><a href="#mainNavigation" class="sr-only sr-only-focusable d-print-none" title="direkt zur Navigation springen">zur Navigation</a></li>
+			<li><a href="#mainContent" class="sr-only sr-only-focusable d-print-none" title="direkt zum Inhalt springen">zum Inhalt</a></li>
+		</ol>
+	</div>
+	</f:if>
+	<div class="headerBackground">
+			<nav class="navbar fixed-top navbar-expand-md border-bottom" role="navigation" id="mainNavigation">
+				<div class="container">
+				<f:cObject typoscriptObjectPath="lib.homelink"/>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+					<ul class="mega navbar-nav">
+						<f:render partial="Navigation/Main" arguments="{_all}"/>
+					</ul>
+				<f:if condition="{settings.search.enable}">
+				<div class="navbar-nav ml-auto mb-3 mb-sm-0" >
+					<div class="nav-item dropdown">
+						<a class="nav-link" href="#" id="dropdownSearchButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="fal fa-search fa-lg"></i>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right search" aria-labelledby="dropdownSearchButton">
+							<f:cObject typoscriptObjectPath="lib.searchbox_html"/>
+						</div>
+					</div>
+				</div>
+				</f:if>
+				</div>
+				</div>
+			</nav>
+	</div>
+</div>
+
+

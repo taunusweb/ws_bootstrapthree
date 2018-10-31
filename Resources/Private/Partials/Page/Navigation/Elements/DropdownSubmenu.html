@@ -1,0 +1,13 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+
+<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink-{submenu.data.uid}">
+	<f:for each="{submenu}" as="subItem">
+		<f:render partial="Navigation/Elements/DropdownLink" arguments="{item: subItem}"/>
+		<f:if condition="{subItem.children}">
+			<f:render section="submenu" arguments="{submenu: subItem.children}"/>
+		</f:if>
+	</f:for>
+</div>
+
+</html>
